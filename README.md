@@ -9,7 +9,7 @@ Example usage:
 
 The result will be in your clipboard - a password uniquely generated using random numbers of seeds made by the site and your master key which you provide upon every program launch.
 
-The password will have minimum requirements defined within the function ```minimumRequirments(String pw)``` and length of at least ```PASSWORD_LENGTH```.
+The password will have minimum requirements defined within the function ```passwordMeetsRequirments(String pw)``` and length of at least ```passwordLength``` which is passed into ```Util```'s constructor.
 
 
 ### How to use
