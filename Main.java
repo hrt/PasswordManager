@@ -28,11 +28,11 @@ public class Main {
     /* Generating password */
     String pw = "";
 
-    while (!util.meetsRequirments(pw)) {
+    while (!util.passwordMeetsRequirments(pw)) {
       pw = "";
       while (pw.length() < passwordLength) {
-        pw += util.returnRandomChar(rndKey);
-        pw += util.returnRandomChar(rndSite);
+        pw += util.getRandomChar(rndKey);
+        pw += util.getRandomChar(rndSite);
       }
     }
 

@@ -22,7 +22,7 @@ public final class Util {
     return l;
   }
 
-  public static char returnRandomChar(Random gen) {
+  public static char getRandomChar(Random gen) {
     int r = gen.nextInt('a' - '0') + '0' + 1;
     while (!(r >= 'a' || (r <= 'Z' && r >= 'A') || (r <= '9' && r >= '0'))) {
       r = gen.nextInt('a' - '0') + '0' + 1;
@@ -30,7 +30,7 @@ public final class Util {
     return (char) r;
   }
 
-  public static int countDigits(String pw) {
+  public static int countDigitsInString(String pw) {
     int count = 0;
     for (int i = 0; i < pw.length(); i++) {
       if (Character.isDigit(pw.charAt(i)))
@@ -39,7 +39,7 @@ public final class Util {
     return count;
   }
 
-  public static int countAlphabetic(String pw) {
+  public static int countAlphabeticInString(String pw) {
     int count = 0;
     for (int i = 0; i < pw.length(); i++) {
       if (Character.isAlphabetic(pw.charAt(i)))
@@ -48,14 +48,14 @@ public final class Util {
     return count;
   }
 
-  public static boolean meetsRequirments(String pw) {
+  public static boolean passwordMeetsRequirments(String pw) {
     if (pw.length() < passwordLength)
       return false;
 
-    if (countDigits(pw) < (passwordLength/3))
+    if (countDigitsInString(pw) < (passwordLength/3))
       return false;
 
-    if (countAlphabetic(pw) < (passwordLength/3))
+    if (countAlphabeticInString(pw) < (passwordLength/3))
       return false;
 
     return true;
