@@ -27,10 +27,20 @@ After the first line is executed, enter your master key into the invisible field
 Simply run
 
 ```
-javac Main.java
+javac Main.java Util.java
+```
+
+To compile everything (including Test.java) then run
+
+```
+javac *.java
 ```
 
 
 ### Testing
 
-This program was just hacked together on the go since a site really pushed me to the limits with password requirements. Therefore I never actually wrote some automated tests. However I have been reliably using this program over the course of 1.5 years of which only one site has complained about password requirements. Just posting the source code out there if anyone else wishes to just use it.
+Compile everything and run
+
+```
+java Test
+```
